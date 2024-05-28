@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* TODO: Look into sticky scroll so they don't encounter some bugs
+   TODO: Make the rest of the webpages/flow */
+
+/* Variables */
+:root {
+  --primary-color: #8cc63f;
+    --secondary-color: #cae4a6;
+    --white-color: #fff;
+    --font-family: "Outfit", sans-serif;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  align-items: center;
+  height: 100px;
+  padding-right: 10px;
+  color: var(--white-color);
+}
+
+.logo {
+  width: 200px;
+  height: 80px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.infoText {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: start;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 300px;
+  max-width: 600px;
+  color: var(--primary-color);
+  transform: scale(2); /* Adjusted scale for better responsiveness */
+}
+
+.recycle {
+  flex-grow: 2;
+  flex-shrink: 1;
+  width: auto;
+  max-width: 450px;
+  height: auto;
+  max-height: 900px;
+  position: relative;
+  top: -65px;
+  left: 20px;
+  z-index: -1;
+  scale: 1.2;
+  transform: rotate(-20deg);
+}
+
+.recycling {
+  background: -webkit-linear-gradient(var(--primary-color), var(--primary-color), var(--primary-color), var(--secondary-color), #eee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 45px;
+}
+
+.btn {
+  border-radius: 1em;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 300;
+  width: 150px;
+  height: 45px;
+  font-size: 20px;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.moreIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: scale(0.1);
+  bottom: 500px;
+  right: 50px;
+}
