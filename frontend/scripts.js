@@ -13,6 +13,7 @@ window.addEventListener('scroll', () => {
   }
   
   lastScrollTop = scrollTop;
+  
 });
 
 const images = [
