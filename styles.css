@@ -18,12 +18,16 @@ body {
   color: var(--secondary-color);
   border-radius: 10px;
   cursor: pointer;
+}
+
+.teamImage {
   transform: scale(5);
   filter: drop-shadow(0 0 2px #000000);
   object-fit: cover;
   max-width: 100px;
 }
 
+.meetOurTeam {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -48,6 +52,9 @@ body {
   transition: opacity 0.3s ease-in-out;
   position: relative;
   top: 37px;
+}
+
+.namePlate {
   background-color: var(--primary-color);
   transition: opacity 0.3s ease-in-out;
   color: var(--white-color);
@@ -57,11 +64,11 @@ body {
   width: 450px;
 }
 
+#slider-position {
   font-size: 1.5em;
   position: relative;
   bottom: 30px;
 }
-
 
 #slider-text {
   font-size: 2em;
@@ -69,7 +76,7 @@ body {
 
 .nav-btn {
   position: absolute;
-
+  bottom: 200px;
   transform: translateY(-50%);
   background-color: var(--primary-color);
   color: white;
@@ -96,14 +103,24 @@ body {
   width: 100px;
 }
 
-
+.aboutMe {
+  background-color: #a3d95a;
   text-align: center;
   color: var(--white-color);
   font-size: 30px;
   width: 700px;
   height: 600px;
   padding: 30px 5px;
+  border: #fff 10px solid;
+  box-shadow: 0 0 0 5px #a0f036;
+}
 
+.slider {
+  display: flex;
+}
+
+.prev-btn,
+.next-btn {
   width: 100px;
   height: 50px;
   background-color: var(--primary-color);
@@ -113,20 +130,25 @@ body {
   border-radius: 100px;
 }
 
+.prev-btn:hover,
+.next-btn:hover {
+  cursor: pointer;
+}
 
+.nameCard {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-
+.team {
   color: var(--primary-color);
   font-size: 50px;
   margin-bottom: 300px;
 }
 
-
+.updateName {
   border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -152,7 +174,9 @@ body {
   top: 0;
   z-index: 1000; /* Ensure it stays above other content */
   transition: top 0.3s; /* Smooth transition */
-
+  width: 100%;
+  margin: 0;
+  padding: 0 20px; /* Adjust padding as needed */
 }
 
 .nav.hidden {
@@ -234,4 +258,42 @@ a:visited {
   transform: scale(0.1);
   bottom: 10%;
   right: 40%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .header {
+    font-size: 1.2em;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .infoText {
+    transform: scale(1.5);
+  }
+
+  .recycle {
+    width: 100%;
+    max-width: 300px;
+    transform: rotate(0);
+  }
+
+  .aboutMe {
+    width: 100%;
+    font-size: 20px;
+  }
 }
