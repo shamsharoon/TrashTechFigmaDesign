@@ -368,3 +368,13 @@ a:visited {
     font-size: 2em;
   }
 }
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 1px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
