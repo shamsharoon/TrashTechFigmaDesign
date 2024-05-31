@@ -265,7 +265,7 @@ a:visited {
 
 .moreIcon {
   position: absolute;
-  transform: translateY(-30%) translateX(-10%);
+  transform: translateY(-40%) translateX(-10%);
   z-index: 2; /* Ensure it overlaps other content */
 }
 
