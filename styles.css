@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 
 .header {
@@ -196,20 +197,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1500px;
   margin: 0 auto;
-  padding: 20px;
-}
+  }
 
 .infoText {
   display: grid;
   grid-template-rows: auto auto;
   justify-items: start;
-  flex-grow: 1;
   flex-shrink: 1;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 500px;
   color: var(--primary-color);
   transform: scale(2); /* Adjusted scale for better responsiveness */
 }
@@ -223,7 +220,7 @@ body {
   max-height: 900px;
   position: relative;
   top: -65px;
-  left: 20px;
+  left: 150px;
   z-index: -1;
   scale: 1.2;
   transform: rotate(-20deg);
