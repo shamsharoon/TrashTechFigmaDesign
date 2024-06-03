@@ -15,7 +15,11 @@ body {
 }
 
 .header {
-  padding-right: 50px;
+  padding-right: 130px;
+  position: relative;
+  right: -150px;
+  top: 3px;
+  text-shadow: 1px 4px 3px rgba(0, 0, 0, 0.363);
 }
 
 .header:hover {
@@ -167,11 +171,9 @@ body {
 
 .nav {
   display: flex;
-  justify-content: space-between;
   background-color: var(--primary-color);
   align-items: center;
-  height: 100px;
-  padding-right: 10px;
+  height: 130px;
   color: var(--white-color);
   position: -webkit-sticky; /* For Safari */
   position: sticky;
@@ -179,8 +181,10 @@ body {
   z-index: 1000; /* Ensure it stays above other content */
   transition: top 0.3s; /* Smooth transition */
   width: 100%;
-  margin: 0;
+
   padding: 0 20px; /* Adjust padding as needed */
+  
+
 }
 
 .nav.hidden {
@@ -188,8 +192,11 @@ body {
 }
 
 .logo {
-  width: 200px;
-  height: 80px;
+  width: auto;
+  height: 90px;
+  position: relative;
+  right: -30px;
+  top:5px;
 }
 
 .content {
@@ -282,7 +289,7 @@ a:visited {
   }
 
   .logo {
-    width: 150px;
+    width: auto;
     height: auto;
   }
 
@@ -345,6 +352,7 @@ a:visited {
     font-size: 16px;
     height: auto;
   }
+
 
   .nav-btn {
     font-size: 1em;
