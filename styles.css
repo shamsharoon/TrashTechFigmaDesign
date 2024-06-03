@@ -210,15 +210,17 @@ body {
 }
 
 .infoText {
+  position:relative;
+  right: -180px;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 10px auto;
   justify-items: start;
   flex-grow: 1;
   flex-shrink: 1;
   min-width: 300px;
   max-width: 600px;
   color: var(--primary-color);
-  transform: scale(2); /* Adjusted scale for better responsiveness */
+  transform: scale(2.5); /* Adjusted scale for better responsiveness */
 }
 
 .recycle {
@@ -230,7 +232,7 @@ body {
   max-height: 900px;
   position: relative;
   top: -65px;
-  left: 20px;
+  left: 120px;
   z-index: -1;
   scale: 1.2;
   transform: rotate(-20deg);
@@ -240,7 +242,10 @@ body {
   background: -webkit-linear-gradient(var(--primary-color), var(--primary-color), var(--primary-color), var(--secondary-color), #eee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 45px;
+  font-size: 55px;
+  position: relative;
+  top: -20px;
+  right:2px;
 }
 
 .btn {
