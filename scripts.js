@@ -54,4 +54,16 @@ function updateSlider() {
   }, 500);
 }
 
+document.querySelectorAll('#navbar a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    // Prevent the default behavior
+    e.preventDefault();
+    
+    // Scroll to the section
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
 updateSlider();
