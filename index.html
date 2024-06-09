@@ -10,14 +10,14 @@
 <body>
     <div id="navbar" class="nav">
         <a href="https://github.com/shamsharoon/TrashTechFigmaDesign"><img src="images/logo.png" alt="TrashTechLogo" class="logo" /></a>
-        <h1 class="header">About Us</h1>
-        <h1 class="header">Our Team</h1>
-        <h1 class="header">Features</h1>
-        <h1 class="header">Partners</h1>
-        <h1 class="header">Contact Us</h1>
+        <h1 class="header"><a href="#about">About Us</a></h1>
+        <h1 class="header"><a href="#team">Our Team</a></h1>
+        <h1 class="header"><a href="#features">Features</a></h1>
+        <h1 class="header"><a href="#partners">Partners</a></h1>
+        <h1 class="header"><a href="#contact">Contact Us</a></h1>
     </div>
     <div class="content">
-        <div class="infoText">
+        <div id="about" class="infoText">
             <h2 class="grid-item">
                 Want to learn more about
                 <span class="recycling"><br />Recycling?</span>
@@ -28,12 +28,7 @@
         </div>
         <img src="images/IPhone.png" alt="Recycle" class="recycle" />
     </div>
-    <div class="moreIconContainer">
-        <div class="moreIcon">
-            <img src="images/moreIcon.png" alt="More" class="more" />
-        </div>
-    </div>
-    <div class="meetOurTeam">
+    <div id="team" class="meetOurTeam">
         <div class="nameCard">
             <h1 class="team">MEET OUR TEAM</h1>
             <div class="rectangle"></div>
@@ -53,6 +48,33 @@
             <h3 id="slider-info" class="about">Hello! I'm Vincent, and I appreciate you taking a moment to learn a bit about me. I'm an easy-going guy with a passion for discovering the little joys in life. Whether it's exploring the great outdoors, diving into a captivating book, or experimenting with new recipes in the kitchen, I'm always on the lookout for new experiences and ways to broaden my horizons. In my professional life, I enjoy taking on challenges and solving problems, often finding myself immersed in projects that require creativity and a keen eye for detail.</h3>
         </div>
     </div>
+
+    <div id="contact" class="container">
+        <h2 class="woo">Contact</h2>
+        <hr>
+        <form>
+          <div class="field" tabindex="1">
+            <label for="username">Your Name</label>
+            <input name="username" type="text" placeholder="e.g. john doe" required>
+          </div>
+          <div class="field" tabindex="2">
+            <label for="email">Your Email</label>
+            <input name="email" type="email" placeholder="email@domain.com" required>
+          </div>
+          <div class="field" tabindex="3">
+            <label for="message">Your Message</label>
+            <textarea name="message" placeholder="type here" required></textarea>
+          </div>
+          <button type="submit">Send Me Message</button>
+        </form>
+        <section class="footer">
+            <!-- add a tags here -->
+          <img class="logos-icon" src="images\github.png" alt="">
+          <img class="logos-icon" src="images\linkedin.png" alt="">
+          <img class="logos-icon" src="images\email.jpg" alt="">
+        </section>
+      </div>
+
     <footer>
         <p>&copy; 2024 TrashTech Website. All rights reserved.</p>
     </footer>
