@@ -295,7 +295,7 @@ a:visited {
 }
 
 .card-side{
-  height: 550px;
+  height: 450px;
   border-radius: 16px;
   transition: all 0.8s ease;
   backface-visibility: hidden;
@@ -508,6 +508,40 @@ img{
   margin: 0 10px; /* Adjust the margin as needed for spacing between cards */
 }
 
+#card1 .card-side.front {
+  background-image: url('images/image.png');
+  background-position: center;
+  background-size: cover; 
+}
+
+#card2 .card-side.front {
+  background-image: url('images/shams.png');
+  background-position: center;
+  background-size: cover; 
+}
+
+#card3 .card-side.front {
+  background-image: url('images/tommy.png');
+  background-position: center;
+  background-size: cover; 
+}
+
+#card4 .card-side.front {
+  background-image: url('images/ethan.png');
+  background-position: center;
+  background-size: cover; 
+}
+
+.aboutus-header{
+  color:#a3d95a;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  text-shadow: 1px 3px 3px #808080;
+  position:relative;
+  top: -10px;
+
+}
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
@@ -555,6 +589,8 @@ img{
     height: 30px;
   }
 }
+
+
 
 @media (max-width: 480px) {
   .header {
