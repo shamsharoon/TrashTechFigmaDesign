@@ -23,36 +23,6 @@ const images = [
 
 let currentIndex = 0;
 
-const imageElement = document.getElementById('slider-image');
-const textElement = document.getElementById('slider-text');
-const infoElement = document.getElementById('slider-info');
-const nextBtn = document.getElementById('next-btn');
-const prevBtn = document.getElementById('prev-btn');
-
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateSlider();
-});
-
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  updateSlider();
-});
-
-function updateSlider() {
-  imageElement.style.opacity = 0;
-  textElement.style.opacity = 0;
-  infoElement.style.opacity = 0;
-
-  setTimeout(() => {
-    imageElement.src = images[currentIndex].src;
-    textElement.textContent = images[currentIndex].text;
-    infoElement.textContent = images[currentIndex].info;
-    imageElement.style.opacity = 1;
-    textElement.style.opacity = 1;
-    infoElement.style.opacity = 1;
-  }, 500);
-}
 
 document.querySelectorAll('#navbar a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -66,4 +36,9 @@ document.querySelectorAll('#navbar a').forEach(anchor => {
   });
 });
 
-updateSlider();
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', function() {
+      this.classList.toggle('flip');
+  });
+});
+
