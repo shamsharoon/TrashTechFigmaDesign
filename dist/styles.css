@@ -245,6 +245,7 @@ body {
   transform: rotate(-20deg);
 }
 
+
 .recycling {
   background: -webkit-linear-gradient(var(--primary-color), var(--primary-color), var(--primary-color), var(--secondary-color), #eee);
   -webkit-background-clip: text;

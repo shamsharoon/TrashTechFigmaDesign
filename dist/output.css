@@ -20,6 +20,12 @@
   /* 2 */
 }
 
+.borderHover:hover{
+  opacity: 0.9;
+  border-radius: 10px;
+  scale: 1.05;
+}
+
 ::before,
 ::after {
   --tw-content: '';
