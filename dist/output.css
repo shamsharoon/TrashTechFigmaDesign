@@ -665,6 +665,11 @@ video {
   width: 1.5rem;
 }
 
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -923,7 +928,6 @@ body{
   background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -1016,9 +1020,7 @@ body{
   /* Ensure it stays above other content */
   transition: top 0.3s;
   /* Smooth transition */
-  width: 100%;
-  padding: 0 20px;
-  /* Adjust padding as needed */
+  width: 100vw;
 }
 
 .nav.hidden {
@@ -1326,12 +1328,6 @@ img{
   font-size: 20px;
 }
 
-@media (max-width: 425px) {
-  form {
-    width: 100%;
-  }
-}
-
 .card {
   flex: 1;
   margin: 0 10px;
@@ -1343,8 +1339,14 @@ img{
 @media (max-width: 800px) {
   .nav {
     flex-direction: column;
-    height: auto;
-    padding: 10px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav a{
+    position: absolute;
+    left: 23%;
   }
 
   .logo {
@@ -1361,6 +1363,10 @@ img{
     padding: 10px;
   }
 
+  .recycling{
+    font-size: 40px;
+  }
+
   .infoText {
     transform: scale(1.25) translateX(-30%) translateY(100%);
     display: flex;
@@ -1369,11 +1375,12 @@ img{
     flex-direction: column;
     position: relative;
     top: 150px;
-    left: 125px;
+    left: 35%;
   }
 
   .infoText h2 {
     font-size: 30px;
+    padding: 0 10px;
   }
 
   .features{
@@ -1387,16 +1394,20 @@ img{
     transform: translateY(-200px);
   }
 
+  .contact form{
+    width: 80%;
+  }
+
   .card-container{
     display: block;
     position: relative;
-    left: 70px;
+    left: -18vw;
   }
 
   .card-container h1{
     position: relative;
     bottom: 50px;
-    left: -50px;
+    left: 23vw;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
