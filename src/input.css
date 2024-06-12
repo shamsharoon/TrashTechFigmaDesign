@@ -544,7 +544,7 @@ img{
 
 
 /* Media Queries for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .nav {
     flex-direction: column;
     height: auto;
@@ -552,12 +552,12 @@ img{
   }
 
   .logo {
-    width: auto;
+    width: 40vw;
     height: auto;
   }
 
   .header {
-    font-size: 1.2em;
+    display: none;
   }
 
   .content {
@@ -566,13 +566,58 @@ img{
   }
 
   .infoText {
-    transform: scale(1.5);
+    transform: scale(1.25) translateX(-30%) translateY(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 150px;
+    left: 125px;
+  }
+  .infoText h2 {
+    font-size: 30px;
+  }
+
+  .features{
+    scale: 0.7;
+    padding-top: 0;
+  }
+
+  .contact{
+    position: relative;
+    scale: 0.7;
+    transform: translateY(-200px);
+  }
+
+  .card-container{
+    display: block;
+    position: relative;
+    left: 70px;
+  }
+
+  .card-container h1{
+    position: relative;
+    bottom: 50px;
+    left: -50px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .infoText button{
+    position: relative;
+    top: 90px;
+    left: 0;
   }
 
   .recycle {
     width: 100%;
     max-width: 300px;
-    transform: rotate(0);
+    scale: 0.7;
+    position: relative;
+    top: -340px;
+    left: 0;
   }
 
   .aboutMe {
@@ -581,62 +626,14 @@ img{
   }
 
   .moreIconContainer {
-    height: 100px; /* Adjust for smaller screens */
+    height: 100px;
+    /* Adjust for smaller screens */
   }
 
   .more {
-    width: 30px; /* Adjust size for smaller screens */
+    width: 30px;
+    /* Adjust size for smaller screens */
     height: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    padding-right: 10px;
-    font-size: 1em;
-  }
-
-  .content {
-    padding: 5px;
-  }
-
-  .infoText {
-    transform: scale(1.2);
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .recycle {
-    max-width: 200px;
-  }
-
-  .aboutMe {
-    width: 100%;
-    font-size: 16px;
-    height: auto;
-  }
-
-
-  .nav-btn {
-    font-size: 1em;
-    padding: 5px;
-    width: 80px;
-  }
-
-  .namePlate {
-    width: 100%;
-  }
-
-  #slider-image {
-    width: 100%;
-  }
-
-  .nameCard {
-    margin: 0;
-  }
-
-  .team {
-    font-size: 2em;
   }
 }
 
