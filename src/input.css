@@ -535,6 +535,7 @@ img{
 
 /* Media Queries for responsiveness */
 @media (max-width: 800px) {
+@media (max-width: 800px) {
   .nav {
     flex-direction: column;
     height: 50px;
@@ -548,6 +549,7 @@ img{
   }
 
   .logo {
+    width: 40vw;
     width: 40vw;
     height: auto;
   }
@@ -624,6 +626,10 @@ img{
     position: relative;
     top: -340px;
     left: 0;
+    scale: 0.7;
+    position: relative;
+    top: -340px;
+    left: 0;
   }
 
   .aboutMe {
@@ -634,9 +640,13 @@ img{
   .moreIconContainer {
     height: 100px;
     /* Adjust for smaller screens */
+    height: 100px;
+    /* Adjust for smaller screens */
   }
 
   .more {
+    width: 30px;
+    /* Adjust size for smaller screens */
     width: 30px;
     /* Adjust size for smaller screens */
     height: 30px;
