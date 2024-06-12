@@ -836,7 +836,7 @@ html{
   scroll-behavior: smooth;
 }
 
-body{
+html, body{
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
@@ -1332,6 +1332,14 @@ img{
 /* Media Queries for responsiveness */
 
 @media (max-width: 800px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    width: 100%;
+    height: 100%;
+  }
+
   .nav {
     flex-direction: column;
     height: 50px;
@@ -1363,14 +1371,14 @@ img{
   }
 
   .infoText {
-    transform: scale(1.25) translateX(-30%) translateY(100%);
+    transform: scale(1.1) translateX(-30%) translateY(100%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
     top: 150px;
-    left: 35%;
+    left: 30%;
   }
 
   .infoText h2 {
@@ -1399,6 +1407,11 @@ img{
     left: -18vw;
   }
 
+  .card{
+    position: relative;
+    margin: auto;
+  }
+
   .card-container h1{
     position: relative;
     bottom: 50px;
@@ -1406,6 +1419,7 @@ img{
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+    margin: auto;
   }
 
   .infoText button{
