@@ -665,11 +665,6 @@ video {
   width: 1.5rem;
 }
 
-.w-min {
-  width: -moz-min-content;
-  width: min-content;
-}
-
 .w-screen {
   width: 100vw;
 }
@@ -1407,7 +1402,7 @@ img{
   .card-container h1{
     position: relative;
     bottom: 50px;
-    left: 23vw;
+    left: 18vw;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
