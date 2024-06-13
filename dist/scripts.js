@@ -42,3 +42,23 @@ document.querySelectorAll('.card').forEach(card => {
   });
 });
 
+// if we dont want animation to be toggled on click
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    let isAnimating = true;
+    const originalAnimation = card.style.animation;
+
+    card.addEventListener('click', () => {
+      if (isAnimating) {
+        card.style.animation = 'none';
+      } else {
+        card.style.animation = originalAnimation;
+      }
+      isAnimating = !isAnimating;
+    });
+  });
+});
+
