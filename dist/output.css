@@ -1240,15 +1240,21 @@ textarea {
 
 .logos{
   flex: 1;
-}
-
-.logos:nth-child(3){
-  transform: rotate(90deg);
+  font-size: 2rem;
+  color: var(--primary-color);
+  padding: 10px;
+  border-radius: 2rem;
 }
 
 .logos:hover{
-  scale: 1.1;
   cursor: pointer;
+  color: white;
+  background-color: var(--primary-color);
+  transition: ease-in-out 0.3s;
+}
+
+i{
+  color: var(--primary-color)
 }
 
 label,
@@ -1290,7 +1296,7 @@ textarea::-webkit-scrollbar {
 }
 
 button {
-  background: #8cc63f;
+  background: var(--primary-color);
   padding: 8px 16px;
   margin: 16px 0 50px 0;
   color: #fff;
@@ -1303,6 +1309,9 @@ button {
 button:hover {
   box-shadow: none;
   scale: 1.1;
+  background: #fff;
+  color: var(--primary-color);
+  border: var(--primary-color) 1px solid;
 }
 
 .get-in-touch {
