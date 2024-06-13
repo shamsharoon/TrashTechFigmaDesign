@@ -43,8 +43,8 @@ document.querySelectorAll('.card').forEach(card => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.pathname === '/TrashTechFigmaDesign/dist/index.html') {
-    const newPath = '/TrashTechFigmaDesign/';
+  if (window.location.pathname === '/dist/index.html') {
+    const newPath = '/';
     history.replaceState(null, '', newPath);
   }
 });
