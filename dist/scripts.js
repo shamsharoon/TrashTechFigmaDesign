@@ -25,10 +25,10 @@ let currentIndex = 0;
 
 
 document.querySelectorAll('#navbar a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     // Prevent the default behavior
     e.preventDefault();
-    
+
     // Scroll to the section
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
@@ -37,8 +37,8 @@ document.querySelectorAll('#navbar a').forEach(anchor => {
 });
 
 document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', function() {
-      this.classList.toggle('flip');
+  card.addEventListener('click', function () {
+    this.classList.toggle('flip');
   });
 });
 
