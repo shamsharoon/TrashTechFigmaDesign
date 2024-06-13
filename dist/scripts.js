@@ -42,12 +42,6 @@ document.querySelectorAll('.card').forEach(card => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.pathname === '/dist/index.html') {
-    const newPath = '/';
-    history.replaceState(null, '', newPath);
-  }
-});
 
 // if we dont want animation to be toggled on click
 
