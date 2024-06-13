@@ -572,6 +572,10 @@ img{
     overflow-x: hidden;
   }
 
+  .logos:hover{
+    transition: ease-in-out none;
+  }
+
   .meet{
     display: block;
   }
