@@ -148,11 +148,15 @@
 
     <!-- Partners End -->
 
-
+    <!-- Contact Form -->
     <div class="contact parent h-full flex justify-center items-center m-0 p-0">
         <div id="contact" class="container child h-1">
             <h2 class="font-sans font-bold">CONTACT</h2>
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+              <input type="hidden" name="access_key" value="324963b1-3d34-43e6-a0f5-7a3b1c3122bb">
+
             <div class="field" tabindex="1">
                 <label for="username">
                 <i class="font-sans"></i>Your Name
@@ -171,7 +175,11 @@
                 </label>
                 <textarea name="message" placeholder="type here" required></textarea>
             </div>
-            <button type="submit">Send Me Message</button>
+
+              <!-- Honeypot Spam Protection -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit">Send Message</button>
             </form>
             <section class="footer">
             <img class="logos" src="images\github.png" alt="">
@@ -180,6 +188,8 @@
             </section>
         </div>
     </div>
+
+    <!-- Contact Form End -->
 
     <script src="scripts.js"></script>
 </body>
