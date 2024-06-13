@@ -42,6 +42,13 @@ document.querySelectorAll('.card').forEach(card => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.location.pathname === '/TrashTechFigmaDesign/dist/index.html') {
+    const newPath = '/TrashTechFigmaDesign/';
+    history.replaceState(null, '', newPath);
+  }
+});
+
 // if we dont want animation to be toggled on click
 
 document.addEventListener('DOMContentLoaded', () => {
