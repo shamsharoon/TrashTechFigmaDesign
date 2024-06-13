@@ -1324,6 +1324,10 @@ img{
     height: 100%;
   }
 
+  .meet{
+    display: block;
+  }
+
   .mores{
     display: block;
     transform: scale(1.2) translateY(-80px) translateX(30%);
@@ -1411,7 +1415,7 @@ img{
   .card-container{
     display: block;
     position: relative;
-    left: -18vw;
+    left: 10vw;
   }
 
   .card{
@@ -1421,8 +1425,8 @@ img{
 
   .card-container h1{
     position: relative;
-    bottom: 50px;
-    left: 18vw;
+    bottom: -30px;
+    left: -10vw;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
