@@ -25,10 +25,10 @@ let currentIndex = 0;
 
 
 document.querySelectorAll('#navbar a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     // Prevent the default behavior
     e.preventDefault();
-    
+
     // Scroll to the section
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
@@ -37,8 +37,29 @@ document.querySelectorAll('#navbar a').forEach(anchor => {
 });
 
 document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', function() {
-      this.classList.toggle('flip');
+  card.addEventListener('click', function () {
+    this.classList.toggle('flip');
+  });
+});
+
+
+// if we dont want animation to be toggled on click
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    let isAnimating = true;
+    const originalAnimation = card.style.animation;
+
+    card.addEventListener('click', () => {
+      if (isAnimating) {
+        card.style.animation = 'none';
+      } else {
+        card.style.animation = originalAnimation;
+      }
+      isAnimating = !isAnimating;
+    });
   });
 });
 

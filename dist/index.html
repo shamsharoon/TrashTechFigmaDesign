@@ -6,43 +6,53 @@
     <title>TrashTech</title>
     <link rel="icon" href="images/TrashTechFavicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body class="h-screen">
-    <div id="navbar" class="nav">
+<body class="h-screen w-screen">
+    <!-- NAV BAR START -->
+    <div id="navbar" class="nav w-screen flex justify-evenly">
         <a href="https://github.com/shamsharoon/TrashTechFigmaDesign"><img src="images/techlogo.png" alt="TrashTechLogo" class="logo" /></a>
-        <h2 class="header font-sans font-extrabold"><a href="#about">ABOUT US</a></h2>
-        <h2 class="header font-sans font-extrabold"><a href="#team">OUR TEAM</a></h2>
-        <h2 class="header font-sans font-extrabold"><a href="#features">FEATURES</a></h2>
-        <h2 class="header font-sans font-extrabold"><a href="#partners">PARTNERS</a></h2>
-        <h2 class="header font-sans font-extrabold"><a href="#contact">CONTACT US</a></h2>
+        <h2 class="header font-sans font-extrabold text-xl"><a href="#about" class="hover:text-slate-200">ABOUT US</a></h2>
+        <h2 class="header font-sans font-extrabold text-xl"><a href="#team" class="hover:text-slate-200">OUR TEAM</a></h2>
+        <h2 class="header font-sans font-extrabold text-xl"><a href="#features" class="hover:text-slate-200">FEATURES</a></h2>
+        <h2 class="header font-sans font-extrabold text-xl"><a href="#partners" class="hover:text-slate-200">PARTNERS</a></h2>
+        <h2 class="header font-sans font-extrabold text-xl"><a href="#contact" class="hover:text-slate-200">CONTACT US</a></h2>
     </div>
+
+    <!-- NAV BAR END -->
     
     <div id="about" class="content flex p-0 m-0 justify-center items-center">
+
         <div class="infoText">
+
             <h2 class="font-sans font-extrabold text-center">
                 Want to learn more about
             </h2>
-            <!-- <h1 class="font-sans font-extrabold">
-                more about
-            </h1> -->
 
             <h1 class="recycling font-sans font-extrabold recycling">Recycling?</h1>
             
             <button class="btn">
-                <a href="https://www.youtube.com" class="font-sans font-bold learn">learn more</a>
+                <a href="https://trash-it.azurewebsites.net/" class="font-sans font-bold learn">learn more</a>
             </button>
         </div>
         <img src="images/IPhone.png" alt="Recycle" class="recycle" />
     </div>
+
+    <!-- More Icon -->
+    <div class="hidden mores">
+      <img src="images\moreIcon.png">
+    </div>
+
+    <!-- More Icon End -->
 
 
     <!-- Below iPhone -->
     <div class="rectangle"></div>
     <!-- Features -->
 
-    <div class="bg-white py-24 sm:py-32 scale-125">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col justify-center items-center">
+    <div class=" scale-125">
+        <div class="features mx-auto max-w-7xl px-6 lg:px-8 flex flex-col justify-center items-center">
           <h1 class="mt-2 pb-5text-3xl tracking-tigh sm:text-4xl text-base font-semibold leading-7 text-TrashTech">Features</h1>
           <div class="mx-auto max-w-2xl lg:text-center">
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Revolutionize Waste Management</p>
@@ -50,7 +60,7 @@
           </div>
           <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              <div class="relative pl-16">
+              <div class="relative pl-16 hover:border-solid borderHover">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
                   <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-TrashTech">
                     <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -61,7 +71,7 @@
                 </dt>
                 <dd class="mt-2 text-base leading-7 text-gray-600">Our advanced AI detects and classifies waste in real-time, ensuring immediate and accurate sorting.</dd>
               </div>
-              <div class="relative pl-16">
+              <div class="relative pl-16 borderHover">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
                   <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-TrashTech">
                     <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -72,7 +82,7 @@
                 </dt>
                 <dd class="mt-2 text-base leading-7 text-gray-600">Streamline operations with our automated sorting solutions, reducing manual labor and operational costs.</dd>
               </div>
-              <div class="relative pl-16">
+              <div class="relative pl-16 borderHover">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
                   <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-TrashTech">
                     <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -83,7 +93,7 @@
                 </dt>
                 <dd class="mt-2 text-base leading-7 text-gray-600">Gain insights with comprehensive data analytics, tracking waste types, volumes, and recycling efficiency.</dd>
               </div>
-              <div class="relative pl-16">
+              <div class="relative pl-16 borderHover">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
                   <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-TrashTech">
                     <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -102,13 +112,11 @@
     <!-- Features End -->
 
 
-    <div class="moreIconContainer">
-        <div class="moreIcon">
-        </div>
-    </div>
+    <!-- Partners -->
 
     <div id="team" class="card-container">
-        <div class="card">
+      <h1 class="hidden meet">Meet Our Team</h1>
+        <div class="card card1">
             <div id="vincent" class="card-side front">
                 <div>Vincent Wong</div>
             </div>
@@ -142,14 +150,20 @@
         </div>
     </div>
 
+    <!-- Partners End -->
 
-    <div class="parent h-full flex justify-center items-center m-0 p-0">
+    <!-- Contact Form -->
+    <div class="contact parent h-full flex justify-center items-center m-0 p-0">
         <div id="contact" class="container child h-1">
             <h2 class="font-sans font-bold">CONTACT</h2>
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+              <input type="hidden" name="access_key" value="324963b1-3d34-43e6-a0f5-7a3b1c3122bb">
+
             <div class="field" tabindex="1">
                 <label for="username">
-                <i class="font-sans"></i>Your Name
+                <i class="font-sans far fa-user"></i>Your Name
                 </label>
                 <input name="username" type="text" placeholder="e.g. john doe" required>
             </div>
@@ -165,15 +179,21 @@
                 </label>
                 <textarea name="message" placeholder="type here" required></textarea>
             </div>
-            <button type="submit">Send Me Message</button>
+
+              <!-- Honeypot Spam Protection -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit">Send Message</button>
             </form>
             <section class="footer">
-            <img class="logos" src="images\github.png" alt="">
-            <img class="logos" src="images\linkedin.png" alt="">
-            <img class="logos" src="images\email.jpg" alt="">
+            <a href=""><i class="logos fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/trashtech.ca"><i class="logos fab fa-instagram"></i></a>
+            <a href="https://github.com/shamsharoon/TrashTechFigmaDesign"><i class="logos fab fa-github"></i></a>
             </section>
         </div>
     </div>
+
+    <!-- Contact Form End -->
 
     <script src="scripts.js"></script>
 </body>

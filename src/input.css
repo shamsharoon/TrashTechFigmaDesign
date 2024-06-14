@@ -36,7 +36,7 @@ html{
 
 }
 
-body{
+html, body{
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
@@ -123,7 +123,6 @@ body{
   background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -214,10 +213,7 @@ body{
   top: 0;
   z-index: 1000; /* Ensure it stays above other content */
   transition: top 0.3s; /* Smooth transition */
-  width: 100%;
-
-  padding: 0 20px; /* Adjust padding as needed */
-  
+  width: 100vw;
 
 }
 
@@ -309,20 +305,6 @@ a:visited {
   color: var(--white-color);
 }
 
-.moreIconContainer {
-  position: relative;
-  width: 100%;
-  height: 200px; /* Adjust height as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.moreIcon {
-  position: absolute;
-  transform: translateY(-40%) translateX(-10%);
-  z-index: 2; /* Ensure it overlaps other content */
-}
 
 .more {
   transform: scale(0.1);
@@ -343,50 +325,80 @@ a:visited {
 
 .card{
   position: relative;
-  left: 110px;
+  top: 200px;
   height: 650px;
   max-width: 400px;
-  margin: 32px;
   background: none;
 }
 
-.card-side.front{
-  background-image:linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+/* animation card start */
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
 }
 
-.card-side.back{
-  background-image:linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+.card:nth-of-type(1){
+  animation: MoveUpDown 1.5s ease-in-out 1s infinite;
+}
+
+
+.card:nth-of-type(2){
+  animation: MoveUpDown 1.5s ease-in-out 1.25s infinite;
+}
+
+.card:nth-of-type(3){
+  animation: MoveUpDown 1.5s ease-in-out 1.5s infinite;
+}
+
+.card:nth-of-type(4){
+  animation: MoveUpDown 1.5s ease-in-out 1.75s infinite;
+}
+
+/* animation card end */
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card-side.front {
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.card-side.back {
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   transform: rotateY(-180deg);
-
 }
 
+.card.flip .card-side.front {
+  transform: rotateY(180deg);
+}
 
-.card:hover .card-side.back{
+.card.flip .card-side.back {
   transform: rotateY(0deg);
 }
 
-.card:hover .card-side.front{
-  transform: rotateY(180deg);
-}
 
 .card-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: -100px;
-  padding: 0;
+  width: 100vw;
+  padding: 50px 0;
+  padding-bottom: 200px;
 }
+
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 * {
   transition: 0.3s ease-in-out;
   font-family: "Outfit", sans-serif;
-}
-
-body {
-  background: #ffffff;
-  overflow-x: hidden;
 }
 
 .container {
@@ -440,13 +452,22 @@ textarea {
   flex: 1;
 }
 
-.logos:nth-child(3){
-  transform: rotate(90deg);
+.logos{
+  font-size: 2rem;
+  color: var(--primary-color);
+  padding: 10px;
+  border-radius: 2rem;
 }
 
 .logos:hover{
-  scale: 1.1;
   cursor: pointer;
+  color: white;
+  background-color: var(--primary-color);
+  transition: ease-in-out 0.3s;
+}
+
+i{
+  color: var(--primary-color)
 }
 
 label,
@@ -488,7 +509,7 @@ textarea::-webkit-scrollbar {
 }
 
 button {
-  background: #8cc63f;
+  background: var(--primary-color);
   padding: 8px 16px;
   margin: 16px 0 50px 0;
   color: #fff;
@@ -501,6 +522,9 @@ button {
 button:hover {
   box-shadow: none;
   scale: 1.1;
+  background: #fff;
+  color: var(--primary-color);
+  border: var(--primary-color) 1px solid;
 }
 
 .get-in-touch {
@@ -530,34 +554,76 @@ img{
   font-size: 20px;
 }
 
-@media (max-width: 425px) {
-  form {
-    width: 100%;
-  }
-}
-
 
 .card {
   flex: 1;
-  margin: 0 10px; /* Adjust the margin as needed for spacing between cards */
+  margin: 0; /* Adjust the margin as needed for spacing between cards */
 }
 
 
 /* Media Queries for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    width: 100vw;
+    height: 100vw;
+    overflow-x: hidden;
+  }
+
+  .logos:hover{
+    transition: ease-in-out none;
+  }
+
+  .meet{
+    display: block;
+  }
+
+
+  .mores{
+    display: block;
+    transform: scale(1.2) translateY(-80px) translateX(30%);
+    position: relative;
+    display: flex;
+    left: 8%;
+    margin: auto;
+    animation: MoveUpDown 1.5s ease-in-out infinite;
+  }
+
+  .mores img{
+    width: 20%;
+    height: auto;
+  }
+
+  #about{
+    transform: translateY(-10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+  }
+
+
   .nav {
     flex-direction: column;
-    height: auto;
-    padding: 10px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav a{
+    position: absolute;
+    left: 23%;
   }
 
   .logo {
-    width: auto;
+    width: 40vw;
     height: auto;
   }
 
   .header {
-    font-size: 1.2em;
+    display: none;
   }
 
   .content {
@@ -565,14 +631,76 @@ img{
     padding: 10px;
   }
 
-  .infoText {
-    transform: scale(1.5);
+  .recycling{
+    font-size: 40px;
   }
+
+  .infoText {
+    transform: scale(1.1) translateX(-30%) translateY(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 150px;
+    left: 30%;
+  }
+  .infoText h2 {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  .features{
+    scale: 0.7;
+    padding-top: 0;
+  }
+
+  .contact{
+    position: relative;
+    scale: 0.7;
+    transform: translateY(-200px);
+  }
+
+  .contact form{
+    width: 80%;
+  }
+
+
+  .card-container{
+    display: block;
+    position: relative;
+    left: 10vw;
+  }
+
+  .card{
+    position: relative;
+    margin: auto;
+  }
+
+  .card-container h1{
+    position: relative;
+    bottom: -30px;
+    left: -10vw;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: auto;
+  }
+
+  .infoText button{
+    position: relative;
+    top: 70px;
+    left: 0;
+  }
+
 
   .recycle {
     width: 100%;
     max-width: 300px;
-    transform: rotate(0);
+    scale: 0.7;
+    position: relative;
+    top: -340px;
+    left: 0;
   }
 
   .aboutMe {
@@ -580,63 +708,20 @@ img{
     font-size: 20px;
   }
 
-  .moreIconContainer {
-    height: 100px; /* Adjust for smaller screens */
-  }
-
   .more {
-    width: 30px; /* Adjust size for smaller screens */
+    width: 30px;
+    /* Adjust size for smaller screens */
     height: 30px;
   }
-}
 
-@media (max-width: 480px) {
-  .header {
-    padding-right: 10px;
-    font-size: 1em;
-  }
-
-  .content {
-    padding: 5px;
-  }
-
-  .infoText {
-    transform: scale(1.2);
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .recycle {
-    max-width: 200px;
-  }
-
-  .aboutMe {
-    width: 100%;
-    font-size: 16px;
-    height: auto;
-  }
-
-
-  .nav-btn {
-    font-size: 1em;
-    padding: 5px;
-    width: 80px;
-  }
-
-  .namePlate {
-    width: 100%;
-  }
-
-  #slider-image {
-    width: 100%;
-  }
-
-  .nameCard {
-    margin: 0;
-  }
-
-  .team {
-    font-size: 2em;
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 5%;
+    }
+    
   }
 }
 
