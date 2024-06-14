@@ -601,7 +601,7 @@ video {
 }
 
 .top-0 {
-  top: 0px;
+  top: 100px;
 }
 
 .m-0 {
@@ -618,7 +618,7 @@ video {
 }
 
 .mt-2 {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .mt-6 {
@@ -743,6 +743,7 @@ video {
   font-family: Outfit, sans-serif;
 }
 
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -822,6 +823,15 @@ video {
 .height{
   border: 2px solid red;
   height: 100px;
+}
+
+.rectangle {
+  position: relative;
+  top: -120px;
+  width: 2000px; /* Width of the rectangle */
+  height: 150px; /* Height of the rectangle */
+  background-color: #cae4a6; /* Background color of the rectangle */
+  margin: 20px auto; /* Center the rectangle horizontally and add some margin */
 }
 
 html{
