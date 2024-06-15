@@ -1102,6 +1102,16 @@ a:visited {
   transform: scale(0.1);
 }
 
+.meetteam{
+  font-size: 75px;
+  text-align: center;
+  position: relative;
+  top: 225px;
+  color: var(--primary-color);
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+
 .card-side{
   height: 550px;
   border-radius: 16px;

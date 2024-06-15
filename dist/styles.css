@@ -197,6 +197,10 @@ body {
   top: -100px; /* Hide the navbar by moving it out of view */
 }
 
+.meetteam{
+  font-size: 100px;
+}
+
 .logo {
   width: auto;
   height: 90px;
