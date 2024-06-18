@@ -6,6 +6,13 @@
     background-color: #8cc63f;
 }
 
+.logo-brand{
+    transform: translateY(-90px);
+    background-color: var(--primary-color);
+}
+
+
+
 .text-TrashTech{
     color: #8cc63f;
     font-size: 20px;
@@ -144,6 +151,11 @@ html, body{
   width: 100px;
 }
 
+.hi i{
+  transform: translateY(-10px);
+}
+
+
 .aboutMe {
   background-color: #a3d95a;
   text-align: center;
@@ -154,6 +166,10 @@ html, body{
   padding: 30px 5px;
   border: #fff 10px solid;
   box-shadow: 0 0 0 5px #a0f036;
+}
+
+.box-shadow, .hi i{
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .slider {
@@ -485,7 +501,7 @@ textarea {
   transition: ease-in-out 0.3s;
 }
 
-i{
+.op{
   color: var(--primary-color)
 }
 
@@ -589,6 +605,22 @@ img{
     width: 100vw;
     height: 100vw;
     overflow-x: hidden;
+  }
+
+  .brands{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scale: 0.6;
+  }
+
+  .logo-brand{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
   }
 
   .logos:hover{
